@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from Home.models import IndexSlider, IndexOfrecemos, IndexLineaProductos
+from Home.models import IndexSlider, IndexOfrecemos, IndexLineaProductos, IndexCertificaciones
 
 
 # Create your views here.
@@ -10,6 +10,7 @@ def index(request):
         'slider':IndexSlider.objects.filter(estado=True).order_by('-creado_en'),
         'ofrecemos':IndexOfrecemos.objects.filter(estado=True),
         'lineaProductos':IndexLineaProductos.objects.filter(estado=True),
+        'certificaciones':IndexCertificaciones.objects.filter(estado=True)
     }
     return render(request,'index.html',contexto)
 
