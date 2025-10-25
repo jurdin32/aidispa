@@ -18,3 +18,11 @@ class IndexOfrecemos(models.Model):
     texto = models.TextField(null=True,blank=True)
     estado=models.BooleanField(default=True)
 
+class IndexLineaProductos(models.Model):
+    creado_en = models.DateTimeField(auto_now_add=True)
+    actualizado_en = models.DateTimeField(auto_now=True)
+    imagen = models.ImageField(upload_to='slider', help_text='imagen de 600 x 520')
+    titulo = models.CharField(max_length=100, null=True, blank=True)
+    texto = models.TextField(null=True, blank=True)
+    estado = models.BooleanField(default=True)
+
