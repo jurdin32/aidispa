@@ -1,13 +1,14 @@
 from django.shortcuts import render
 
-from Home.models import IndexSlider
+from Home.models import IndexSlider, IndexOfrecemos
 
 
 # Create your views here.
 def index(request):
-    slider=IndexSlider.objects.filter(estado=True).order_by('-creado_en')
+
     contexto={
-        'slider':slider,
+        'slider':IndexSlider.objects.filter(estado=True).order_by('-creado_en'),
+        'ofrecemos':IndexOfrecemos.objects.filter(estado=True)
     }
     return render(request,'index.html',contexto)
 

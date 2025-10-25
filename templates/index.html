@@ -75,7 +75,7 @@
             </div>
         </section>
         <!-- end section -->
-        <!-- start section -->
+        <!-- start section
         <section class="background-position-center-top pb-2 sm-pb-50px position-relative z-index-1 sm-background-image-none" style="background-image: url('images/vertical-line-bg.svg')">
             <div class="container">
                 <div class="row align-items-center">
@@ -131,7 +131,7 @@
                 </div>
             </div> 
         </section>
-        <!-- end section -->  
+         end section   -->
         <!-- start section -->
         <section class="pt-0 background-position-center-top sm-background-image-none" style="background-image: url('images/vertical-line-bg.svg')">
             <div class="container-fluid d-none d-md-block">
@@ -144,86 +144,28 @@
             <div class="container">  
                 <div class="row justify-content-center mb-3">
                     <div class="col-lg-7 text-center" data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                        <span class="alt-font text-uppercase fw-600 d-inline-block ls-1px">What we offers</span>
-                        <h3 class="alt-font text-dark-gray fw-600 ls-minus-1px shadow-none" data-shadow-animation="true" data-animation-delay="1000">Explore the <span class="text-highlight fw-800">services<span class="bg-gradient-emerald-blue-emerald-green h-8px bottom-10px opacity-6 separator-animation"></span></span></h3>
-                    </div>
+                        <span class="alt-font text-uppercase fw-600 d-inline-block ls-1px">Ofrecemos</span>
+                         </div>
                 </div>
                 <div class="row row-cols-1 row-cols-lg-3 row-cols-sm-2 justify-content-center" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 100, "staggervalue": 200, "easing": "easeOutQuad" }'>
                     <!-- start fancy text box item -->
-                    <div class="col md-mb-30px">
+                    {% for ofr in ofrecemos %}
+                    <div class="col md-mb-30px pb-2">
                         <div class="border-radius-8px overflow-hidden box-shadow-quadruple-large services-box-style-03 last-paragraph-no-margin">
                             <div class="position-relative box-image">
-                                <a href="demo-startup-services-details.html"><img src="https://placehold.co/600x500" alt=""></a>
-                                <a href="#" class="btn btn-very-small btn-rounded btn-dark-gray text-white btn-box-shadow ps-15px pe-15px pt-5px pb-5px lh-16 position-absolute right-30px top-30px text-uppercase">Research</a>
+                                <a href="demo-startup-services-details.html"><img src="media/{{ ofr.imagen }}" alt=""></a>
                             </div>
                             <div class="bg-white">
-                                <div class="ps-65px pe-65px xl-ps-50px xl-pe-50px lg-ps-30px lg-pe-30px pt-30px pb-30px text-center">
-                                    <a href="demo-startup-services-details.html" class="d-inline-block fs-18 alt-font fw-700 text-dark-gray mb-5px">Research planning</a>
-                                    <p>Lorem ipsum simply dummy text of amet consectetur.</p> 
+                                <div class="ps-65px pe-65px xl-ps-50px xl-pe-50px lg-ps-30px lg-pe-30px pt-30px text-center">
+                                    <a href="demo-startup-services-details.html" class="d-inline-block fs-18 alt-font fw-700 text-dark-gray mb-5px">{{ofr.titulo}}</a>
                                 </div> 
                                 <div class="d-flex justify-content-center border-top border-color-extra-medium-gray pt-20px pb-20px ps-50px pe-50px position-relative text-center">
-                                    <a href="demo-startup-services-details.html" class="btn btn-link btn-hover-animation-switch btn-very-small fw-700 text-dark-gray text-uppercase">
-                                        <span>
-                                            <span class="btn-text">Explore services</span>
-                                            <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span>
-                                            <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span>
-                                        </span> 
-                                    </a>
+                                   <span class="btn-text">{{ ofr.texto|truncatechars:200 }}</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- end fancy text box item -->  
-                    <!-- start fancy text box item -->
-                    <div class="col md-mb-30px">
-                        <div class="border-radius-8px overflow-hidden box-shadow-quadruple-large services-box-style-03 last-paragraph-no-margin">
-                            <div class="position-relative box-image">
-                                <a href="demo-startup-services-details.html"><img src="https://placehold.co/600x500" alt=""></a>
-                                <a href="#" class="btn btn-very-small btn-rounded btn-dark-gray text-white btn-box-shadow ps-15px pe-15px pt-5px pb-5px lh-16 position-absolute right-30px top-30px text-uppercase">Business</a>
-                            </div>
-                            <div class="bg-white">
-                                <div class="ps-65px pe-65px xl-ps-50px xl-pe-50px lg-ps-30px lg-pe-30px pt-30px pb-30px text-center">
-                                    <a href="demo-startup-services-details.html" class="d-inline-block fs-18 alt-font fw-700 text-dark-gray mb-5px">Business promotion</a>
-                                    <p>Lorem ipsum simply dummy text of amet consectetur.</p> 
-                                </div> 
-                                <div class="d-flex justify-content-center border-top border-color-extra-medium-gray pt-20px pb-20px ps-50px pe-50px position-relative text-center">
-                                    <a href="demo-startup-services-details.html" class="btn btn-link btn-hover-animation-switch btn-very-small fw-700 text-dark-gray text-uppercase">
-                                        <span>
-                                            <span class="btn-text">Explore services</span>
-                                            <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span>
-                                            <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span>
-                                        </span> 
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end fancy text box item -->
-                    <!-- start fancy text box item -->
-                    <div class="col">
-                        <div class="border-radius-8px overflow-hidden box-shadow-quadruple-large services-box-style-03 last-paragraph-no-margin">
-                            <div class="position-relative box-image">
-                                <a href="demo-startup-services-details.html"><img src="https://placehold.co/600x500" alt=""></a>
-                                <a href="#" class="btn btn-very-small btn-rounded btn-dark-gray text-white btn-box-shadow ps-15px pe-15px pt-5px pb-5px lh-16 position-absolute right-30px top-30px text-uppercase">Revenue</a>
-                            </div>
-                            <div class="bg-white">
-                                <div class="ps-65px pe-65px xl-ps-50px xl-pe-50px lg-ps-30px lg-pe-30px pt-30px pb-30px text-center">
-                                    <a href="demo-startup-services-details.html" class="d-inline-block fs-18 alt-font fw-700 text-dark-gray mb-5px">Revenue generation</a>
-                                    <p>Lorem ipsum simply dummy text of amet consectetur.</p> 
-                                </div> 
-                                <div class="d-flex justify-content-center border-top border-color-extra-medium-gray pt-20px pb-20px ps-50px pe-50px position-relative text-center">
-                                    <a href="demo-startup-services-details.html" class="btn btn-link btn-hover-animation-switch btn-very-small fw-700 text-dark-gray text-uppercase">
-                                        <span>
-                                            <span class="btn-text">Explore services</span>
-                                            <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span>
-                                            <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span>
-                                        </span> 
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end fancy text box item -->
+                    {% endfor %}
                 </div>
             </div>
         </section>
