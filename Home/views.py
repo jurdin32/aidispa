@@ -21,4 +21,4 @@ def contact(request):
     contexto={
         'productos': Producto.objects.all(),
     }
-    return render(request,'contact.html')
+    return render(request,'contact.html',contexto)
