@@ -30,39 +30,15 @@
                             <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink" role="button"
                                data-bs-toggle="dropdown" aria-expanded="false"></i>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                {% for ip in productos %}
                                 <li>
-                                    <a href="demo-startup-services-details.html"><i class="line-icon-Money-Bag"></i>
+                                    <a href="/producto/{{ip.id}}"><i class="line-icon-Money-Bag"></i>
                                         <div class="submenu-icon-content">
-                                            <span>Research planning</span>
-                                            <p>Research and strategy</p>
+                                            <span>{{ ip }}</span>
                                         </div>
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="demo-startup-services-details.html"><i class="line-icon-Cursor-Click2"></i>
-                                        <div class="submenu-icon-content">
-                                            <span>Business promotion</span>
-                                            <p>Development and scale</p>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="demo-startup-services-details.html"><i class="line-icon-Bar-Chart"></i>
-                                        <div class="submenu-icon-content">
-                                            <span>Marketing strategy</span>
-                                            <p>Testing and evaluation</p>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="demo-startup-services-details.html"><i
-                                            class="line-icon-Environmental-3"></i>
-                                        <div class="submenu-icon-content">
-                                            <span>Business research</span>
-                                            <p>Research and strategy</p>
-                                        </div>
-                                    </a>
-                                </li>
+                                {% endfor %}
                             </ul>
                         </li>
                         <li class="nav-item"><a href="demo-startup-clients.html" class="nav-link">Servicio</a></li>

@@ -1,0 +1,36 @@
+CKEDITOR_5_CONFIGS = {
+    'default': {
+        'toolbar': [
+            'heading', '|',
+            'fontFamily', 'fontSize', 'fontColor', 'fontBackgroundColor', '|',
+            'bold', 'italic', 'underline', '|',
+            'alignment', '|',
+            'bulletedList', 'numberedList', '|',
+            'insertTable', 'imageUpload', 'mediaEmbed', '|',
+            'undo', 'redo', 'removeFormat'
+        ],
+        'image': {
+            'toolbar': [
+                'imageTextAlternative', 'imageStyle:full', 'imageStyle:side'
+            ]
+        },
+        'table': {
+            'contentToolbar': [
+                'tableColumn', 'tableRow', 'mergeTableCells',
+                'tableProperties', 'tableCellProperties'
+            ]
+        },
+        'fontFamily': {
+            'options': [
+                'default',
+                'Calibri, Arial, sans-serif',
+                'Times New Roman, serif',
+                'Courier New, monospace'
+            ],
+            'supportAllValues': False
+        },
+        'fontSize': {
+            'options': [10, 12, 14, 16, 18, 20, 24, 28, 32]
+        }
+    }
+}

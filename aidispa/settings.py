@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 import os.path
 from pathlib import Path
 
-from django.conf.global_settings import MEDIA_ROOT
+from django.conf.global_settings import MEDIA_ROOT, STATIC_ROOT, STATICFILES_DIRS
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -39,7 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_ckeditor_5',
     'Home',
+    'Productos',
 ]
 
 MIDDLEWARE = [
@@ -118,8 +120,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
+#STATIC_ROOT = BASE_DIR / 'static'
 STATICFILES_DIRS=[
-    'static',
+BASE_DIR / 'static',
 ]
 MEDIA_ROOT=BASE_DIR / 'media'
 MEDIA_URL='media/'
@@ -128,3 +131,76 @@ MEDIA_URL='media/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+#ckeditor:
+customColorPalette = [
+        {
+            'color': 'hsl(4, 90%, 58%)',
+            'label': 'Red'
+        },
+        {
+            'color': 'hsl(340, 82%, 52%)',
+            'label': 'Pink'
+        },
+        {
+            'color': 'hsl(291, 64%, 42%)',
+            'label': 'Purple'
+        },
+        {
+            'color': 'hsl(262, 52%, 47%)',
+            'label': 'Deep Purple'
+        },
+        {
+            'color': 'hsl(231, 48%, 48%)',
+            'label': 'Indigo'
+        },
+        {
+            'color': 'hsl(207, 90%, 54%)',
+            'label': 'Blue'
+        },
+    ]
+
+CKEDITOR_5_CONFIGS = {
+    'default': {
+        'toolbar': [
+            'undo', 'redo', '|',
+            'heading', '|',
+            'fontFamily', 'fontSize', '|',
+            'fontColor', 'fontBackgroundColor', '|',
+            'bold', 'italic', 'underline', 'strikethrough', '|',
+            'alignment', '|',
+            'bulletedList', 'numberedList', 'outdent', 'indent', '|',
+            'link', 'imageUpload', 'insertTable', 'mediaEmbed', '|',
+            'subscript', 'superscript', '|',
+            'removeFormat', '|',
+            'sourceEditing'
+        ],
+        'height': 500,
+        'width': '100%',
+        'image': {
+            'toolbar': ['imageTextAlternative','imageStyle:full','imageStyle:side','linkImage']
+        },
+         'table': {
+            'contentToolbar': [ 'tableColumn', 'tableRow', 'mergeTableCells',
+            'tableProperties', 'tableCellProperties' ],
+            'tableProperties': {
+                'borderColors': customColorPalette,
+                'backgroundColors': customColorPalette
+            },
+            'tableCellProperties': {
+                'borderColors': customColorPalette,
+                'backgroundColors': customColorPalette
+            }
+        },
+    }
+}
+
+CKEDITOR_5_CUSTOM_CSS = 'css/ckeditor_word_style.css'
+
+
+
+
+CKEDITOR_5_FILE_STORAGE = "path_to_storage.CustomStorage" # optional
+
+# Define a constant in settings.py to specify file upload permissions
+CKEDITOR_5_FILE_UPLOAD_PERMISSION = "staff"
